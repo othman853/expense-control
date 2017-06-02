@@ -1,16 +1,9 @@
-spring:
-  jpa:
-    hibernate:
-      dialect: whatever
-
 ec:
   database:
-    url: jdbc:postgres://10.27.12.98:5432/expense_control_config_test
-    username: ${DATABASE_USERNAME}
-    password: ${DATABASE_PASSWORD}
-    driverClassName: org.postgresql.Driver
-
-
+    url: jdbc:postgresql://db:5432/test_db
+    username: test
+    password: test
+    driver-class-name: org.postgresql.Driver
 
 server:
   contextPath: /
