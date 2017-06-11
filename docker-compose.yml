@@ -6,6 +6,11 @@ services:
       - "8080:8080"
     depends_on:
       - db
+    environment:
+      - EXPCON_DATABASE_USER=test
+      - EXPCON_DATABASE_PASSWORD=test
+      - EXPCON_DATABASE_URL=jdbc:postgresql://db:5432/test_db
+
   db:
     image: postgres:9.4
     ports:

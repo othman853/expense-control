@@ -1,8 +1,8 @@
 ec:
   database:
-    url: jdbc:postgresql://db:5432/test_db
-    username: test
-    password: test
+    url: ${EXPCON_DATABASE_URL}
+    username: ${EXPCON_DATABASE_USER}
+    password: ${EXPCON_DATABASE_PASSWORD}
     driver-class-name: org.postgresql.Driver
 
 server:
