@@ -40,3 +40,7 @@ dependencies {
 
     testCompile "junit:junit:4.12"
 }
+
+task migrate(type: Exec) {
+    commandLine "/bin/bash", "scripts/migrate.sh"
+}
