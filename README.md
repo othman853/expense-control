@@ -11,3 +11,36 @@ Little system to control finances.
 - Well tested project
 - Java 8 All the way
 - FlyWay migrations
+
+
+## Operating
+
+Techs:
+- Some shell scripting
+- Make
+- Docker
+- Docker Compose
+- PostgreSQL 9.4
+
+### Running:
+
+
+``` sh
+./gradlew dockerRun
+```
+
+Where run means:
+- Build a jar of Spring Boot application with gradle
+- Start docker compose with two containers:
+    - A Postgresql container
+    - A Open JDK 8 container built from `Dockerfile`
+
+### Stopping:
+
+
+``` sh
+./gradlew dockerStop
+```
+
+Where stop means:
+- Stopping all containers started by `./gradlew dockerRun`
