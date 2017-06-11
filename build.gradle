@@ -32,3 +32,11 @@ dependencies {
 
     testCompile "junit:junit:4.12"
 }
+
+task dockerRun(type: Exec, dependsOn: ['build']) {
+    commandLine "docker-compose", "up", "-d", "--build", "web"
+}
+
+task dockerStop(type: Exec) {
+    commandLine "docker-compose", "stop"
+}
